@@ -3,11 +3,17 @@ function iniciarJuego(){
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 }
 
-
 function seleccionarMascotaJugador(){
-    alert("Seleccionaste tu mascota")
+    
+    let spanMascotaJugador = document.getElementById("nomMascotaJugador")
+
+    const mascotaSeleccionada = document.querySelector('input[name="mascota"]:checked')
+    if (mascotaSeleccionada){
+        alert("La mascota seleccionada es: " + mascotaSeleccionada.id)
+        spanMascotaJugador.innerHTML = mascotaSeleccionada.id
+    }else{
+        alert("Debes seleccionar una opción")
+    }
 }
-
-
 
 window.addEventListener('load', iniciarJuego)
