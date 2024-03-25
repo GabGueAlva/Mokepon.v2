@@ -5,51 +5,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mokepon</title>
         <script src="./js/mokepon.js"></script>
+        <link rel="stylesheet" href="./styles.css">
     </head>
+
     <body>
-        <h1> ¡MOKEPON! 🔥💦🌱</h1>
+        <div class="contenedor-secundario"> </div>
+            <section id="seleccionar-mascota">
+                <h1 class="titulo"> ¡MOKEPON!</h1>
 
-        <section id="seleccionar-mascota">
-            <h2>Elige tu mascota:</h2>
 
-            <input type="radio" name="mascota" id="Hipodoge"/ >
-            <label for="Hipodoge">Hipodoge</label> <br>
+                <h2 class="subtitulo">Elige tu mascota:</h2>
 
-            <input type="radio" name="mascota" id="Capipepo"/ >
-            <label for="Capipepo">Capipepo</label> <br>
+                <div class="tarjetas" >
+                    <input type="radio" name="mascota" id="Hipodoge"/ >
+                    <label class="tarjeta-de-mokepon" for="Hipodoge">Hipodoge</label> <br>
+        
+                    <input type="radio" name="mascota" id="Capipepo"/ >
+                    <label class="tarjeta-de-mokepon" for="Capipepo">Capipepo</label> <br>
+        
+                    <input type="radio" name="mascota" id="Ratigueya"/ >
+                    <label class="tarjeta-de-mokepon" for="Ratigueya">Ratigueya</label> <br>
+        
+                    <input type="radio" name="mascota" id="Langostelvis"/ >
+                    <label class="tarjeta-de-mokepon" for="Langostelvis">Langostelvis</label> <br>
+        
+                    <input type="radio" name="mascota" id="Tucapalma"/ >
+                    <label class="tarjeta-de-mokepon" for="Tucapalma">Tucapalma</label> <br>
+        
+                    <input type="radio" name="mascota" id="Pydos"/ >
+                    <label class="tarjeta-de-mokepon" for="Pydos">Pydos</label> <br>
 
-            <input type="radio" name="mascota" id="Ratigueya"/ >
-            <label for="Ratigueya">Ratigueya</label> <br>
+                </div>
+        
 
-            <input type="radio" name="mascota" id="Langostelvis"/ >
-            <label for="Langostelvis">Langostelvis</label> <br>
+                <button id="boton-mascota">SELECCIONA TU MASCOTA</button>
+            </section>
+            
+            <section id="seleccionar-ataque">
+                <h1 class="titulo"> ¡MOKEPON! 🔥💦🌱</h1>
+                <h2>Elige tu ataque:</h2>
+                <p> Tu mascota <span id="nomMascotaJugador"></span> tiene <span id="vidasJugador">3</span> vidas</p>
+                <p> La mascota <span id="nomMascotaEnemigo"></span> del enemigo tiene <span id="vidasEnemigo">3</span>  vidas</p>
 
-            <input type="radio" name="mascota" id="Tucapalma"/ >
-            <label for="Tucapalma">Tucapalma</label> <br>
+                <P>
+                    <button id="boton-fuego">Fuego 🔥</button>
+                    <button id="boton-Agua">Agua 💦</button>
+                    <button id="boton-Tierra">Tierra 🌱</button>
+                </P>
+            </section>
 
-            <input type="radio" name="mascota" id="Pydos"/ >
-            <label for="Pydos">Pydos</label> <br>
+            <section id="mensajes">
+            </section>
 
-            <button id="boton-mascota">Seleccionar</button>
-        </section>
-           
-        <section id="seleccionar-ataque">
-            <h2>Elige tu ataque:</h2>
-            <p> Tu mascota <span id="nomMascotaJugador"></span> tiene <span id="vidasJugador">3</span> vidas</p>
-            <p> La mascota <span id="nomMascotaEnemigo"></span> del enemigo tiene <span id="vidasEnemigo">3</span>  vidas</p>
-
-            <P>
-                <button id="boton-fuego">Fuego 🔥</button>
-                <button id="boton-Agua">Agua 💦</button>
-                <button id="boton-Tierra">Tierra 🌱</button>
-            </P>
-        </section>
-
-        <section id="mensajes">
-        </section>
-
-        <section id="reiniciar">
-            <button id="boton-Reiniciar">Reiniciar</button>
-        </section>
+            <section id="reiniciar">
+                <button id="boton-Reiniciar">Reiniciar</button>
+            </section>    
     </body>
 </html>
