@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fondo.jpg);
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2f3542;
+}
+
+.contenedor-secundario{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    padding: 5px;
+    background-color: rgba(225, 225, 225, .4);
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#seleccionar-mascota .titulo{
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+}
+
+#seleccionar-mascota .subtitulo{
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+#seleccionar-mascota .tarjetas {
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#seleccionar-mascota .tarjeta-de-mokepon{
+    width: 150px;
+    height: 150px;
+    background: none;
+    padding: 5px;
+    border: 1px dashed black;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
+}
+
+#boton-mascota{
+    background: none;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border: #87A922 5px dashed;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+}   
+
+input{
+    display: none;
+}
+  
