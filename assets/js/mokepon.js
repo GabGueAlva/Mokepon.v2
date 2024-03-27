@@ -16,7 +16,7 @@ function iniciarJuego(){
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
     
-    let botonFuego = document.getElementById("boton-fuego")
+    let botonFuego = document.getElementById("boton-Fuego")
     botonFuego.addEventListener('click', ataqueFuego)
     let botonAgua = document.getElementById("boton-Agua")
     botonAgua.addEventListener('click', ataqueAgua)
@@ -73,7 +73,6 @@ function seleccionarMascotaEnemigo(){
 
 function ataqueFuego(){
 
-    const mascotaSeleccionada = document.querySelector('input[name="mascota"]:checked')
     let botonFuego = document.getElementById("boton-fuego")
 
     while(vidasEnemigo > 0 && vidasJugador > 0){
@@ -88,7 +87,6 @@ function ataqueFuego(){
 
 function ataqueAgua(){
 
-    const mascotaSeleccionada = document.querySelector('input[name="mascota"]:checked')
     let botonAgua = document.getElementById("boton-Agua")
 
     while(vidasEnemigo > 0 && vidasJugador > 0){
@@ -102,7 +100,6 @@ function ataqueAgua(){
 
 function ataqueTierra(){
 
-    const mascotaSeleccionada = document.querySelector('input[name="mascota"]:checked')
     let botonTierra = document.getElementById("boton-Tierra")
 
     while(vidasEnemigo > 0 && vidasJugador > 0){

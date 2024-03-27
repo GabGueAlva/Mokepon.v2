@@ -10,6 +10,7 @@ body{
     width: 100%;
     height: 100vh;
     background-image: url(../img/fondo.jpg);
+    background-size: 25%;
     font-family: "Concert One", sans-serif;
     font-style: normal;
     font-style: normal;
@@ -22,7 +23,7 @@ body{
 .contenedor-secundario{
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 700px;
     height: 600px;
     padding: 5px;
     background-color: rgba(225, 225, 225, .4);
@@ -36,7 +37,7 @@ body{
     padding: 10px;
 }
 
-#seleccionar-mascota .titulo{
+.titulo{
     width: 100%;
     font-size: 80px;
     text-align: center;
@@ -54,31 +55,237 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    justify-items: center;
+    gap: 20px;
+    margin: 20px;
 }
 
-#seleccionar-mascota .tarjeta-de-mokepon{
+#seleccionar-mascota .tarjetas .tarjeta-de-mokepon{
     width: 150px;
     height: 150px;
     background: none;
     padding: 5px;
-    border: 1px dashed black;
+    border-radius: 50%;
     justify-content: center;
     align-items: flex-end;
     display: flex;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+      }
+
+    &[for="Pydos"]{
+        background-image: url(../img/pydos.jpg);
+        background-size: contain;
+    }
+
+    &[for="Tucapalma"]{
+        background-image: url(../img/tucapalma.jpg);
+        background-size: contain;
+    }
+
+    &[for="Langostelvis"]{
+        background-image: url(../img/langostelvis.jpg);
+        background-size: contain;
+    }
+
+    &[for="Capipepo"]{
+        background-image: url(../img/capipepo.jpg);
+        background-size: contain;
+    } 
+
+    &[for="Ratigueya"]{
+        background-image: url(../img/ratigueya.jpg);
+        background-size: contain;
+    }  
+
+    &[for="Hipodoge"] {
+        background-image: url(../img/hipodoge.jpg);
+        background-size: contain;
+    }
+
 }
 
+@keyframes animacion-boton {
+    0% {
+      transform: rotateX(0deg);
+    }
+    50% {
+      transform: rotateX(15deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+
 #boton-mascota{
-    background: none;
+    background: #dce35b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dce35b, #45b649); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dce35b, #45b649);
     width: 200px;
     height: 50px;
     padding: 10px;
-    border: #87A922 5px dashed;
+    border: 3px dashed;
     font-family: "Concert One", sans-serif;
     font-style: normal;
+    font-size:100%;
+    margin: 20px;
+    animation: animacion-boton 1s infinite ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:active{
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+
 }   
+
 
 input{
     display: none;
 }
-  
+
+#seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#seleccionar-ataque .subtitulo{
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    margin: 20px; 
+}
+
+#vidasJug{
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    margin: 20px;   
+}
+
+#vidasEng{
+    width: 100%;
+    font-size: 26px;
+    text-align: center;
+    margin: 20px;   
+}
+
+#botonesCombate{
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    gap: 20px;
+    margin: 10px;
+}
+
+#boton-Fuego{
+    background: #f12711;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 3px RED dashed;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    font-size:100%;
+    margin: 20px;
+    animation: animacion-boton 1s infinite ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    justify-content: center;
+
+    &:hover {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+      }
+}
+
+#boton-Agua{
+    background: #B2FEFA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 3px BLUE dashed;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    font-size:100%;
+    margin: 20px;
+    animation: animacion-boton 1s infinite ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    justify-content: center;
+
+    &:hover {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+#boton-Tierra{
+    background: #6A9113;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #141517, #6A9113);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #141517, #6A9113); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 3px #3F2305 dashed;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    font-size:100%;
+    margin: 20px;
+    animation: animacion-boton 1s infinite ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+    justify-content: center;
+
+    &:hover {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+      }
+    
+}
+
+#mensajes{
+    overflow-y: scroll;
+    height: 70px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px; 
+}
+
+#reiniciar{
+    position:absolute;
+    top: 561PX;
+    left: 420px;
+}
+
+#boton-Reiniciar{
+    background: #dce35b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dce35b, #45b649); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dce35b, #45b649);
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border: 3px dashed;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    font-size:100%;
+    margin: 0 auto;
+    animation: animacion-boton 1s infinite ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover {
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+      }
+}
+
