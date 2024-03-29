@@ -271,8 +271,48 @@ input{
     grid-template-columns: 100px 100px;
 }
 
-#mensajes .ataques-del-enemigo, .ataques-del-jugador{
+#ataques-del-enemigo{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#ataques-del-jugador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#ver-mapa button{
+    background: #dce35b; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dce35b, #45b649); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dce35b, #45b649);
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    border: 3px dashed;
+    font-family: "Concert One", sans-serif;
+    font-style: normal;
+    font-size:100%;
+    margin: 20px;
+    animation: animacion-boton 1s infinite ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover{
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media (max-witdh:360){
+    #ver-mapa div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
