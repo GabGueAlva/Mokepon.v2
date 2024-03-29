@@ -68,43 +68,20 @@ body{
     border-radius: 50%;
     justify-content: center;
     align-items: flex-end;
-    display: flex;
+    display: inline-block;
     cursor: pointer;
 
     &:hover {
         box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
       }
 
-    &[for="Pydos"]{
-        background-image: url(../img/pydos.jpg);
-        background-size: contain;
-    }
+}
 
-    &[for="Tucapalma"]{
-        background-image: url(../img/tucapalma.jpg);
-        background-size: contain;
-    }
-
-    &[for="Langostelvis"]{
-        background-image: url(../img/langostelvis.jpg);
-        background-size: contain;
-    }
-
-    &[for="Capipepo"]{
-        background-image: url(../img/capipepo.jpg);
-        background-size: contain;
-    } 
-
-    &[for="Ratigueya"]{
-        background-image: url(../img/ratigueya.jpg);
-        background-size: contain;
-    }  
-
-    &[for="Hipodoge"] {
-        background-image: url(../img/hipodoge.jpg);
-        background-size: contain;
-    }
-
+.tarjeta-de-mokepon img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
 }
 
 @keyframes animacion-boton {
@@ -179,7 +156,7 @@ input{
     padding: 10px;
     width: 100%;
     justify-content: center;
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, auto);
     justify-items: center;
     gap: 20px;
@@ -289,3 +266,13 @@ input{
       }
 }
 
+#mensajes .ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
+
+#mensajes .ataques-del-enemigo, .ataques-del-jugador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
