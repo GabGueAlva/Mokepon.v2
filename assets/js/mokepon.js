@@ -55,8 +55,8 @@ class Mokepon {
         this.ataques = []
         this.ancho = 60
         this.alto = 60
-        this.x = aleatorio(0, mapa.width - this.ancho)
-        this.y = aleatorio(0, mapa.height - this.alto)
+        this.x = aleatorio(0, 400 - this.ancho)
+        this.y = aleatorio(0, 400 - this.alto)
         this.mapaFoto = new Image()
         this.mapaFoto.src = foto 
         this.velocidadX = 0
@@ -206,6 +206,20 @@ function iniciarJuego(){
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
     botonReiniciar.addEventListener('click', reiniciarJuego)
+
+    unirseAlJuego()
+}
+
+function unirseAlJuego(){
+    fetch("http://localhost:8080/unirse")
+        .then(function (res){
+            if (res.ok){
+                res.text()
+                    .then(function (respuesta){
+                        console.log(respuesta)
+                    }) 
+            }
+        })
 }
 
 function seleccionarMascotaJugador(){
